@@ -1,0 +1,6 @@
+selected resource name:		etl-and-ml-project-pipeline
+selected resource type:		pipeline
+factory name:			azure-data-factory-2801
+factory location:		canadacentral
+subscription id:		a7e5bb0a-4c2d-4770-8ba2-5adf2a916d3a
+time of download (UTC):		Tue, 26 Nov 2024 02:33:03 GMT

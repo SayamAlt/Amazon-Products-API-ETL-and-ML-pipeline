@@ -1,0 +1,84 @@
+{
+    "name": "etl-and-ml-project-pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Amazon Products Price Prediction",
+                "type": "DatabricksNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "Analyze and Visualize Amazon Product Sales data",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/n01606417@humber.ca/etl_and_ml_project/modeling/Amazon Products Price Prediction"
+                },
+                "linkedServiceName": {
+                    "referenceName": "databricks_course_ws",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "Process Amazon Products Data",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/n01606417@humber.ca/etl_and_ml_project/processing/Process Amazon Products Data"
+                },
+                "linkedServiceName": {
+                    "referenceName": "databricks_course_ws",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "Analyze and Visualize Amazon Product Sales data",
+                "type": "DatabricksNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "Process Amazon Products Data",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/n01606417@humber.ca/etl_and_ml_project/analysis/Amazon Product Data Analysis"
+                },
+                "linkedServiceName": {
+                    "referenceName": "databricks_course_ws",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2024-11-26T01:54:11Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

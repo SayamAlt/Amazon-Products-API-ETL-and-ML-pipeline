@@ -1,0 +1,26 @@
+{
+    "name": "amazon_products_price_prediction_trigger",
+    "properties": {
+        "description": "This trigger triggers the execution of processing and machine learning notebooks in Amazon Products Price Prediction project.",
+        "annotations": [],
+        "runtimeState": "Started",
+        "pipelines": [
+            {
+                "pipelineReference": {
+                    "referenceName": "etl-and-ml-project-pipeline",
+                    "type": "PipelineReference"
+                }
+            }
+        ],
+        "type": "ScheduleTrigger",
+        "typeProperties": {
+            "recurrence": {
+                "frequency": "Day",
+                "interval": 7,
+                "startTime": "2024-11-25T04:08:00",
+                "endTime": "2024-12-23T04:08:00",
+                "timeZone": "Eastern Standard Time"
+            }
+        }
+    }
+}

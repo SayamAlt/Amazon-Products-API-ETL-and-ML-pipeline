@@ -1,0 +1,23 @@
+{
+    "now": "2024-11-26T02:33:03.776Z",
+    "perfNow": 9756.300000000745,
+    "diagnosticCorrelation": "669e5e2c-40be-45ff-b62b-b636536c3a3a",
+    "source": "DownloadSupportFiles",
+    "environment": {
+        "productName": "adf",
+        "buildVersion": "1.0.101424.2",
+        "environmentType": 3,
+        "resourceName": "azure-data-factory-2801",
+        "resourceRegion": "canadacentral",
+        "resourceGroup": "databrickscourse-rg",
+        "subscriptionId": "a7e5bb0a-4c2d-4770-8ba2-5adf2a916d3a",
+        "sessionId": "c4d+/Ed8K1cDegF74s15N0",
+        "operationId": "",
+        "gitType": "live",
+        "loggingKey": "89224a7d-1fdb-4d98-bf9c-a64484d80327"
+    },
+    "additionalInfo": {
+        "selectedResource": "etl-and-ml-project-pipeline",
+        "selectedResourceType": "pipeline"
+    }
+}
